@@ -54,8 +54,7 @@ public class UserRepository implements GBRepository {
     public Optional<User> update(Long userId, User update) {
         List<User> users = findAll();
         User editUser = users.stream()
-                .filter(u -> u.getId()
-                        .equals(userId))
+                .filter(u -> u.getId().equals(userId))
                 .findFirst().orElseThrow(() -> new RuntimeException("User not found"));
         editUser.setFirstName(update.getFirstName());
         editUser.setLastName(update.getLastName());

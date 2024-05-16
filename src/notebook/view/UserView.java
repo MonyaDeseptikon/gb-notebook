@@ -38,6 +38,9 @@ public class UserView {
                 case UPDATE:
                     String userId = prompt("Enter user id: ");
                     userController.updateUser(userId, createUser());
+                    break;
+                case LIST :
+
             }
         }
     }
