@@ -32,4 +32,11 @@ public class UserController {
         update.setId(Long.parseLong(userId));
         repository.update(Long.parseLong(userId), update);
     }
+
+    public void deleteUser(String Id) {
+        repository.delete(Long.parseLong(Id));
+    }
+    public void listUser() {
+        repository.list();
+    }
 }
